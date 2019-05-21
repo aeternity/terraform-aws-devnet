@@ -1,2 +1,3 @@
-# terraform-aws-devnet
-Terraform configuration of aeternity devnet nodes
+# Aeternity devnet infrastructure configuration
+
+Refer to CircleCI configuration for testing examples.
