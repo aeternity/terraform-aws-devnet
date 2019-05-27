@@ -1,7 +1,7 @@
 module "aws_deploy-dev1-eu-west-2" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "dev1"
-  bootstrap_version = "v2.0.1"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -12,7 +12,7 @@ module "aws_deploy-dev1-eu-west-2" {
   root_volume_size = 20
 
   aeternity = {
-    package = "https://s3.eu-central-1.amazonaws.com/aeternity-node-builds/aeternity-latest-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
@@ -23,7 +23,7 @@ module "aws_deploy-dev1-eu-west-2" {
 module "aws_deploy-dev2-eu-west-2" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "dev2"
-  bootstrap_version = "v2.0.1"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -33,7 +33,7 @@ module "aws_deploy-dev2-eu-west-2" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://s3.eu-central-1.amazonaws.com/aeternity-node-builds/aeternity-latest-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
@@ -44,7 +44,7 @@ module "aws_deploy-dev2-eu-west-2" {
 module "aws_deploy-integration-eu-west-2" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "integration"
-  bootstrap_version = "v2.0.1"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -55,7 +55,7 @@ module "aws_deploy-integration-eu-west-2" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://s3.eu-central-1.amazonaws.com/aeternity-node-builds/aeternity-latest-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
@@ -66,7 +66,7 @@ module "aws_deploy-integration-eu-west-2" {
 module "aws_deploy-next-eu-west-2" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v1.0.0"
   env               = "next"
-  bootstrap_version = "v2.0.1"
+  bootstrap_version = "${var.bootstrap_version}"
   vault_role        = "ae-node"
   vault_addr        = "${var.vault_addr}"
 
@@ -77,7 +77,7 @@ module "aws_deploy-next-eu-west-2" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   aeternity = {
-    package = "https://s3.eu-central-1.amazonaws.com/aeternity-node-builds/aeternity-latest-ubuntu-x86_64.tar.gz"
+    package = "${var.package}"
   }
 
   providers = {
