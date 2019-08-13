@@ -8,7 +8,7 @@ module "aws_deploy-dev1-eu-west-2" {
   spot_nodes_min = 3
   spot_nodes_max = 3
 
-  spot_price    = "0.125"
+  spot_price    = "0.07"
   instance_type = "m4.large"
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
@@ -31,7 +31,7 @@ module "aws_deploy-dev2-eu-west-2" {
   spot_nodes_min = 2
   spot_nodes_max = 2
 
-  spot_price    = "0.125"
+  spot_price    = "0.07"
   instance_type = "m4.large"
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
@@ -55,7 +55,7 @@ module "aws_deploy-integration-eu-west-2" {
   spot_nodes_min = 2
   spot_nodes_max = 2
 
-  spot_price    = "0.125"
+  spot_price    = "0.07"
   instance_type = "m4.large"
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
@@ -84,7 +84,7 @@ module "aws_deploy-next-eu-west-2" {
   spot_nodes_min = 2
   spot_nodes_max = 2
 
-  spot_price    = "0.125"
+  spot_price    = "0.07"
   instance_type = "m4.large"
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
