@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  version = "1.55"
+  version = "2.16.0"
   region  = "eu-west-2"
   alias   = "eu-west-2"
 }

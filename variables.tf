@@ -3,7 +3,7 @@ variable "vault_addr" {
 }
 
 variable "bootstrap_version" {
-  default = "v2.2.0"
+  default = "v2.6.5"
 }
 
 variable "package" {
