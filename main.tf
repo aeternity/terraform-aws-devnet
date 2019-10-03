@@ -83,6 +83,7 @@ module "aws_deploy-next-eu-west-2" {
   static_nodes   = 1
   spot_nodes_min = 2
   spot_nodes_max = 2
+
   enable_internal_api = true
 
   spot_price    = "0.07"
