@@ -101,6 +101,6 @@ resource "aws_route53_record" "next" {
   zone_id = "${var.dns_zone}"
   name    = "${var.next_domain}"
   type    = "A"
-  records = ${modules.aws_deploy-next-eu-west-2.static_node_ips}
+  records = "${modules.aws_deploy-next-eu-west-2.static_node_ips}"
   ttl     = 60
 }
