@@ -103,4 +103,6 @@ resource "aws_route53_record" "next" {
   type    = "A"
   records = "${modules.aws_deploy-next-eu-west-2.static_node_ips}"
   ttl     = 60
+
+  provider = "aws.eu-west-2"
 }
