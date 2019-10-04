@@ -15,5 +15,5 @@ variable "dns_zone" {
 }
 
 variable "next_domain" {
-  default = "next"
+  default = "next.aeternity.io"
 }
