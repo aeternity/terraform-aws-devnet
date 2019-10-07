@@ -12,3 +12,8 @@ provider "aws" {
   region  = "eu-west-2"
   alias   = "eu-west-2"
 }
+
+provider "aws" {
+  version = "2.16.0"
+  region  = "us-east-1"
+}
