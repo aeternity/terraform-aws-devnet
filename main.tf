@@ -1,5 +1,5 @@
 module "aws_deploy-dev1-eu-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.1"
   env               = "dev1"
   bootstrap_version = var.bootstrap_version
   vault_role        = "ae-node"
@@ -22,7 +22,7 @@ module "aws_deploy-dev1-eu-west-2" {
 }
 
 module "aws_deploy-dev2-eu-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.1"
   env               = "dev2"
   bootstrap_version = var.bootstrap_version
   vault_role        = "ae-node"
@@ -45,7 +45,7 @@ module "aws_deploy-dev2-eu-west-2" {
 }
 
 module "aws_deploy-integration-eu-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.1"
   env               = "integration"
   bootstrap_version = var.bootstrap_version
   vault_role        = "ae-node"
@@ -74,7 +74,7 @@ module "aws_deploy-integration-eu-west-2" {
 }
 
 module "aws_deploy-next-eu-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.0"
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.1"
   env               = "next"
   bootstrap_version = var.bootstrap_version
   vault_role        = "ae-node"
