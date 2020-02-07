@@ -7,7 +7,7 @@ variable "bootstrap_version" {
 }
 
 variable "package" {
-  default = "https://s3.eu-central-1.amazonaws.com/aeternity-node-builds/aeternity-latest-ubuntu-x86_64.tar.gz"
+  default = "https://builds.aeternity.io/aeternity-latest-ubuntu-x86_64.tar.gz"
 }
 
 variable "dns_zone" {
