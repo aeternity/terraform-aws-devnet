@@ -60,7 +60,7 @@ module "aws_deploy-integration-eu-west-2" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
 
   snapshot_filename = "mnesia_uat_v-1_latest.tgz"
 
