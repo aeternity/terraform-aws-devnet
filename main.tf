@@ -88,7 +88,7 @@ module "aws_deploy-integration_sync-eu-west-2" {
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   additional_storage      = true
-  additional_storage_size = 30
+  additional_storage_size = 60
 
   snapshot_filename = "empty"
 
