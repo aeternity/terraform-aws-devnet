@@ -73,6 +73,34 @@ module "aws_deploy-integration-eu-west-2" {
   }
 }
 
+module "aws_deploy-integration_sync-eu-west-2" {
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.1"
+  env               = "integration_sync"
+  bootstrap_version = var.bootstrap_version
+  vault_role        = "ae-node"
+  vault_addr        = var.vault_addr
+
+  spot_nodes_min = 3
+  spot_nodes_max = 3
+
+  spot_price    = "0.07"
+  instance_type = "m4.large"
+  ami_name      = "aeternity-ubuntu-16.04-v1549009934"
+
+  additional_storage      = true
+  additional_storage_size = 30
+
+  snapshot_filename = "empty"
+
+  aeternity = {
+    package = "${var.package}"
+  }
+
+  providers = {
+    aws = "aws.eu-west-2"
+  }
+}
+
 module "aws_deploy-next-eu-west-2" {
   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v2.3.1"
   env               = "next"
