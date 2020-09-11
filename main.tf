@@ -80,11 +80,11 @@ module "aws_deploy-integration_sync-eu-west-2" {
   vault_role        = "ae-node"
   vault_addr        = var.vault_addr
 
-  spot_nodes_min = 3
-  spot_nodes_max = 3
+  spot_nodes_min = 1
+  spot_nodes_max = 1
 
-  spot_price    = "0.07"
-  instance_type = "m4.large"
+  spot_price    = "0.10"
+  instance_type = "c5.xlarge"
   ami_name      = "aeternity-ubuntu-16.04-v1549009934"
 
   additional_storage      = true
