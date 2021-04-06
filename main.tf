@@ -80,7 +80,7 @@ module "aws_deploy-integration_sync-eu-west-2" {
   vault_role        = "ae-node"
   vault_addr        = var.vault_addr
 
-  spot_nodes_min = 1
+  spot_nodes_min = 3
   spot_nodes_max = 3
 
   spot_price    = "0.10"
