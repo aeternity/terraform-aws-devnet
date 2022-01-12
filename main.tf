@@ -52,7 +52,7 @@ module "aws_deploy-integration-eu-west-2" {
   ami_name      = "aeternity-ubuntu-18.04-v1616681631"
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   providers = {
     aws = aws.eu-west-2
@@ -74,7 +74,7 @@ module "aws_deploy-integration_sync-eu-west-2" {
   ami_name      = "aeternity-ubuntu-18.04-v1616681631"
 
   additional_storage      = true
-  additional_storage_size = 120
+  additional_storage_size = 240
 
   providers = {
     aws = aws.eu-west-2
