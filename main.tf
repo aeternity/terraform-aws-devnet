@@ -10,7 +10,7 @@
 
 #   spot_price    = "0.07"
 #   instance_type = "m4.large"
-#   ami_name      = "aeternity-ubuntu-18.04-v1616681631"
+#   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
 #   providers = {
 #     aws = aws.eu-west-2
@@ -29,7 +29,7 @@
 
 #   spot_price    = "0.07"
 #   instance_type = "m4.large"
-#   ami_name      = "aeternity-ubuntu-18.04-v1616681631"
+#   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
 #   providers = {
 #     aws = aws.eu-west-2
@@ -48,8 +48,8 @@ module "aws_deploy-integration-eu-west-2" {
   spot_nodes_max = 2
 
   spot_price    = "0.07"
-  instance_type = "m4.large"
-  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
+  instance_type = "m5.large"
+  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
   additional_storage      = true
   additional_storage_size = 240
@@ -71,7 +71,7 @@ module "aws_deploy-integration_sync-eu-west-2" {
 
   spot_price    = "0.10"
   instance_type = "c5.large"
-  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
+  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
   additional_storage      = true
   additional_storage_size = 240
@@ -95,8 +95,8 @@ module "aws_deploy-next-eu-west-2" {
   enable_internal_api = true
 
   spot_price    = "0.07"
-  instance_type = "m4.large"
-  ami_name      = "aeternity-ubuntu-18.04-v1616681631"
+  instance_type = "m5.large"
+  ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
   additional_storage      = true
   additional_storage_size = 120
