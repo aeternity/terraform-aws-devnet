@@ -58,7 +58,7 @@ commands:
         default: /tmp/plans
       out:
         type: string
-        default: /tmp/plans/plan.out
+        default: plan.out
     steps:
       - run:
           name: Terraform plan
