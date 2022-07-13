@@ -162,14 +162,14 @@ workflows:
           requires: []
           filters:
             branches:
-              only: master
+              ignore: master
 
       - hodl:
           type: approval
           requires: []
           filters:
             branches:
-              only: master
+              ignore: master
 
       - apply:
           context: ae-infra-manage
@@ -178,4 +178,4 @@ workflows:
             - hodl
           filters:
             branches:
-              only: master
+              ignore: master
