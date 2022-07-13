@@ -92,7 +92,10 @@ commands:
         default: /tmp/plans
       path:
         type: string
-        default: "/tmp/plans/plan.out"
+        default: "."
+      out:
+        type: string
+        default: "plan.out"
       auto_approve:
         type: boolean
         default: false
@@ -115,6 +118,7 @@ commands:
             envdir /secrets terraform -chdir=<< parameters.path >> apply \
               -lock-timeout=<< parameters.lock_timeout >> \
               -parallelism=<< parameters.parallelism >> \
+              << parameters.out >> \
               $TF_ARGS
 
 jobs:
