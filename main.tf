@@ -51,6 +51,7 @@ module "aws_deploy-integration-eu-west-2" {
   instance_type = "m5.large"
   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
+  root_volume_size        = 24
   additional_storage      = true
   additional_storage_size = 240
 
@@ -73,6 +74,7 @@ module "aws_deploy-integration_sync-eu-west-2" {
   instance_type = "c5.large"
   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
+  root_volume_size        = 24
   additional_storage      = true
   additional_storage_size = 240
 
@@ -98,6 +100,7 @@ module "aws_deploy-next-eu-west-2" {
   instance_type = "m5.large"
   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
+  root_volume_size        = 24
   additional_storage      = true
   additional_storage_size = 120
 
