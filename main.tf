@@ -8,7 +8,7 @@
 #   spot_nodes_min = 3
 #   spot_nodes_max = 3
 
-#   spot_price    = "0.07"
+#   spot_price    = "0.08"
 #   instance_type = "m4.large"
 #   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
@@ -27,7 +27,7 @@
 #   spot_nodes_min = 2
 #   spot_nodes_max = 2
 
-#   spot_price    = "0.07"
+#   spot_price    = "0.08"
 #   instance_type = "m4.large"
 #   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
@@ -47,7 +47,7 @@ module "aws_deploy-integration-eu-west-2" {
   spot_nodes_min = 2
   spot_nodes_max = 2
 
-  spot_price    = "0.07"
+  spot_price    = "0.08"
   instance_type = "m5.large"
   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
@@ -70,8 +70,8 @@ module "aws_deploy-integration_sync-eu-west-2" {
   spot_nodes_min = 3
   spot_nodes_max = 3
 
-  spot_price    = "0.10"
-  instance_type = "c5.large"
+  spot_price    = "0.15"
+  instance_type = "c5.xlarge"
   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
   root_volume_size        = 24
@@ -96,7 +96,7 @@ module "aws_deploy-next-eu-west-2" {
 
   enable_internal_api = true
 
-  spot_price    = "0.07"
+  spot_price    = "0.08"
   instance_type = "m5.large"
   ami_name      = "aeternity-ubuntu-18.04-v1653564902"
 
