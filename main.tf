@@ -37,8 +37,8 @@
 # }
 
 module "aws_deploy-integration-eu-west-2" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.0"
-  env               = "integration"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.0"
+  env    = "integration"
 
   static_nodes   = 1
   spot_nodes_min = 2
@@ -53,8 +53,8 @@ module "aws_deploy-integration-eu-west-2" {
   additional_storage_size = 240
 
   tags = {
-    role  = "aenode"
-    env   = "integration"
+    role = "aenode"
+    env  = "integration"
   }
 
   config_tags = {
