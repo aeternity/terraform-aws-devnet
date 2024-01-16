@@ -69,38 +69,38 @@ module "aws_deploy-integration-eu-west-2" {
   }
 }
 
-# module "aws_deploy-integration_sync-eu-west-2" {
-#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.0"
-#   env               = "integration_sync"
+module "aws_deploy-integration_sync-eu-west-2" {
+  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.1.0"
+  env               = "integration_sync"
 
-#   static_nodes   = 3
-#   spot_nodes_min = 0
-#   spot_nodes_max = 0
+  static_nodes   = 1
+  spot_nodes_min = 0
+  spot_nodes_max = 0
 
-#   instance_type  = "c5.xlarge"
-#   instance_types = ["c6i.xlarge", "c5d.xlarge", "c6in.xlarge", "c5.xlarge"]
-#   ami_name       = "aeternity-ubuntu-18.04-v1653564902"
+  instance_type  = "c5.xlarge"
+  instance_types = ["c6i.xlarge", "c5d.xlarge", "c6in.xlarge", "c5.xlarge"]
+  ami_name       = "aeternity-ubuntu-22.04-*"
 
-#   root_volume_size        = 24
-#   additional_storage      = true
-#   additional_storage_size = 240
+  root_volume_size        = 24
+  additional_storage      = true
+  additional_storage_size = 240
 
-#   tags = {
-#     role  = "aenode"
-#     env   = "integration_sync"
-#   }
+  tags = {
+    role  = "aenode"
+    env   = "integration_sync"
+  }
 
-#   config_tags = {
-#     bootstrap_version = var.bootstrap_version
-#     vault_role        = "ae-node"
-#     vault_addr        = var.vault_addr
-#     node_config       = "secret/aenode/config/integration_sync"
-#   }
+  config_tags = {
+    vault_role        = "ae-node"
+    vault_addr        = var.vault_addr
+    bootstrap_version = "master"
+    bootstrap_config  = "secret/aenode/config/integration_sync"
+  }
 
-#   providers = {
-#     aws = aws.eu-west-2
-#   }
-# }
+  providers = {
+    aws = aws.eu-west-2
+  }
+}
 
 # module "aws_deploy-next-eu-west-2" {
 #   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.0.0"
