@@ -83,7 +83,7 @@ module "aws_deploy-integration_sync-eu-west-2" {
 
   root_volume_size        = 24
   additional_storage      = true
-  additional_storage_size = 240
+  additional_storage_size = 500
 
   tags = {
     role  = "aenode"
