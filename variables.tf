@@ -10,6 +10,6 @@ variable "dns_zone" {
   default = "ZSEEAAX46MKWZ"
 }
 
-variable "next_domain" {
-  default = "next.aeternity.io"
+variable "domain" {
+  default = "aeternity.io"
 }

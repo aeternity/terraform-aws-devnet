@@ -89,6 +89,14 @@ module "aws_deploy-integration" {
   }
 }
 
+resource "aws_route53_record" "integration" {
+  zone_id = var.dns_zone
+  name    = "integration.${var.domain}"
+  type    = "A"
+  records = module.aws_deploy-integration.static_node_ips
+  ttl     = 300
+}
+
 # module "aws_deploy-integration_sync" {
 #   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.1.0"
 #   env               = "integration_sync"
