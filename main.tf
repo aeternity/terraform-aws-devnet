@@ -8,7 +8,7 @@
 
 #   instance_type  = "m5.large"
 #   instance_types = ["m6i.large", "m5d.large", "m5.large"]
-#   ami_name       = "aeternity-ubuntu-22.04-v1705404634"
+#   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
 #   tags = {
 #     role = "aenode"
@@ -37,7 +37,7 @@
 
 #   instance_type  = "m5.large"
 #   instance_types = ["m6i.large", "m5d.large", "m5.large"]
-#   ami_name       = "aeternity-ubuntu-22.04-v1705404634"
+#   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
 #   tags = {
 #     role = "aenode"
@@ -66,7 +66,7 @@ module "aws_deploy-integration" {
 
   instance_type  = "m5.large"
   instance_types = ["m6i.large", "m5d.large", "m5.large"]
-  ami_name       = "aeternity-ubuntu-22.04-v1708524781"
+  ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
   root_volume_size        = 24
   additional_storage      = true
@@ -107,7 +107,7 @@ resource "aws_route53_record" "integration" {
 
 #   instance_type  = "c5.xlarge"
 #   instance_types = ["c6i.xlarge", "c5d.xlarge", "c6in.xlarge", "c5.xlarge"]
-#   ami_name       = "aeternity-ubuntu-22.04-v1705404634"
+#   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
 #   root_volume_size        = 24
 #   additional_storage      = true
