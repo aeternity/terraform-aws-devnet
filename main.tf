@@ -1,33 +1,33 @@
-module "aws_deploy-dev1" {
-  source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.3.0"
-  env               = "dev1"
+# module "aws_deploy-dev1" {
+#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.3.0"
+#   env               = "dev1"
 
-  static_nodes   = 0
-  spot_nodes_min = 1
-  spot_nodes_max = 1
+#   static_nodes   = 0
+#   spot_nodes_min = 1
+#   spot_nodes_max = 1
 
-  instance_type  = "m5.large"
-  instance_types = ["m6i.large", "m5d.large", "m5.large"]
-  ami_name       = "aeternity-ubuntu-22.04-v1709639419"
+#   instance_type  = "m5.large"
+#   instance_types = ["m6i.large", "m5d.large", "m5.large"]
+#   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
-  root_volume_size        = 24
+#   root_volume_size        = 24
 
-  tags = {
-    role = "aenode"
-    env  = "dev1"
-  }
+#   tags = {
+#     role = "aenode"
+#     env  = "dev1"
+#   }
 
-  config_tags = {
-    vault_role        = "ae-node"
-    vault_addr        = var.vault_addr
-    bootstrap_version = "master"
-    bootstrap_config  = "secret2/aenode/config/dev1"
-  }
+#   config_tags = {
+#     vault_role        = "ae-node"
+#     vault_addr        = var.vault_addr
+#     bootstrap_version = "boot_order" # var.bootstrap_version
+#     bootstrap_config  = "secret2/aenode/config/dev1"
+#   }
 
-  providers = {
-    aws = aws.eu-north-1
-  }
-}
+#   providers = {
+#     aws = aws.eu-north-1
+#   }
+# }
 
 # module "aws_deploy-dev2" {
 #   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.3.0"
