@@ -20,7 +20,7 @@
 #   config_tags = {
 #     vault_role        = "ae-node"
 #     vault_addr        = var.vault_addr
-#     bootstrap_version = "boot_order" # var.bootstrap_version
+#     bootstrap_version = var.bootstrap_version
 #     bootstrap_config  = "secret2/aenode/config/dev1"
 #   }
 
