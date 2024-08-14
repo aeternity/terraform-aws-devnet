@@ -1,5 +1,5 @@
 # module "aws_deploy-dev1" {
-#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.3.0"
+#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
 #   env               = "dev1"
 
 #   static_nodes   = 0
@@ -30,7 +30,7 @@
 # }
 
 # module "aws_deploy-dev2" {
-#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.3.0"
+#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
 #   env               = "dev2"
 
 #   static_nodes   = 0
@@ -61,7 +61,7 @@
 # }
 
 module "aws_deploy-integration" {
-  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.3.0"
+  source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
   env    = "integration"
 
   static_nodes   = 1
@@ -102,7 +102,7 @@ resource "aws_route53_record" "integration" {
 }
 
 # module "aws_deploy-integration_sync" {
-#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.3.0"
+#   source            = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v3.4.0"
 #   env               = "integration_sync"
 
 #   static_nodes   = 1
