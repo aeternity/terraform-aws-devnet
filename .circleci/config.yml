@@ -2,7 +2,7 @@ version: 2.1
 executors:
   infrastructure_container:
     docker:
-      - image: aeternity/infrastructure:v4.3.0
+      - image: aeternity/infrastructure:v4.4.0
     working_directory: /src
 
 commands:
@@ -20,7 +20,14 @@ commands:
       lock_timeout:
         type: string
         default: "5m"
+      terraform_version:
+        type: string
+        default: "1.9.6"
     steps:
+      - run:
+          name: Setup terraform version
+          command: |
+            echo << parameters.terraform_version >>  >> << parameters.path >>/.terraform-version
       - run:
           name: Terraform init
           command: |
