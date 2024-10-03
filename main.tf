@@ -41,7 +41,7 @@
 #   instance_types = ["m6i.large", "m5.large"]
 #   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
 
-    # root_volume_size        = 24
+# root_volume_size        = 24
 
 #   tags = {
 #     role = "aenode"
