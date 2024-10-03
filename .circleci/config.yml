@@ -20,14 +20,7 @@ commands:
       lock_timeout:
         type: string
         default: "5m"
-      terraform_version:
-        type: string
-        default: "1.9.6"
     steps:
-      - run:
-          name: Setup terraform version
-          command: |
-            echo << parameters.terraform_version >>  >> << parameters.path >>/.terraform-version
       - run:
           name: Terraform init
           command: |
