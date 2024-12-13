@@ -133,3 +133,75 @@ resource "aws_route53_record" "integration" {
 #     aws = aws.eu-north-1
 #   }
 # }
+
+# module "aws_deploy-loadtest_miner" {
+#   source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
+#   env    = "loadtest"
+
+#   static_nodes   = 1
+#   spot_nodes_min = 0
+#   spot_nodes_max = 0
+
+#   instance_type  = "m7i.2xlarge"
+#   instance_types = ["m7i.2xlarge"]
+#   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
+
+#   root_volume_size        = 50
+
+#   tags = {
+#     role = "aenode"
+#     env  = "loadtest"
+#     kind = "miner"
+#   }
+
+#   config_tags = {
+#     vault_role        = "ae-node"
+#     vault_addr        = var.vault_addr
+#     bootstrap_version = var.bootstrap_version
+#     bootstrap_config  = "secret2/aenode/config/loadtest_miner"
+#   }
+
+#   providers = {
+#     aws = aws.eu-north-1
+#   }
+# }
+
+# module "aws_deploy-loadtest_api" {
+#   source = "github.com/aeternity/terraform-aws-aenode-deploy?ref=v4.0.0"
+#   env    = "loadtest"
+
+#   static_nodes   = 1
+#   spot_nodes_min = 0
+#   spot_nodes_max = 0
+
+#   instance_type  = "c7i.2xlarge"
+#   instance_types = ["c7i.2xlarge"]
+#   ami_name       = "aeternity-ubuntu-22.04-v1709639419"
+
+#   root_volume_size        = 50
+
+#   tags = {
+#     role = "aenode"
+#     env  = "loadtest"
+#     kind = "api"
+#   }
+
+#   config_tags = {
+#     vault_role        = "ae-node"
+#     vault_addr        = var.vault_addr
+#     bootstrap_version = var.bootstrap_version
+#     bootstrap_config  = "secret2/aenode/config/loadtest_api"
+#   }
+
+#   providers = {
+#     aws = aws.eu-north-1
+#   }
+# }
+
+# resource "aws_route53_record" "loadtest" {
+#   zone_id = var.dns_zone
+#   name    = "loadtest.${var.domain}"
+#   type    = "A"
+#   records = module.aws_deploy-loadtest_api.static_node_ips
+#   ttl     = 300
+# }
